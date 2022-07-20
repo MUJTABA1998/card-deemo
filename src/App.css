@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    width: 97%;
+    height: 100%;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card-wrapper{
+    width: 40%;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    '. c1 .'
+    'c2 c1 c3'
+    'c2 c4 c3'
+    'c5 c4 c6'
+    'c5 c7 c6'
+    '. c7 .';
+
+}
+
+
+.card{
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #00a8ff;
+    border: 1px solid #dcdde1;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.card-1{
+    grid-area: c1;
+}
+.card-2{
+    grid-area: c2;
+}
+.card-3{
+    grid-area: c3;
+
+}
+.card-4{
+    grid-area: c4;
+    background: url(../public/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border: none;
+}
+.card-4 .rectangle{
+    background: #fff;
+}
+.card-4 .overlay p{
+    color: #fff;
+}
+.card-5{
+    grid-area: c5;
+}
+.card-6{
+    grid-area: c6;
+}
+.card-7{
+    grid-area: c7;
+}
+
+.rectangle{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 174, 239, 0.1);
+    border-radius: 5px;
+}
+.card h3{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+}
+.card p{
+    font-size: 13px;
+    color: #333333;
+}
+.card .overlay{
+    width: 173px;
+    min-height: 172px;
+    background: #00afefb4;
+    margin-left: -13px;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: -16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1500px ){
+    .card-wrapper{
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width:1000px ){
+    .card-wrapper{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width:850px ){
+    .card-wrapper{
+        width: 50%;
+        margin: auto;
+        align-content: center;
+        justify-content: center;
+        grid-template-areas: 
+        'c1 c2'
+        'c3 c4'
+        'c5 c6'
+        'c7  .';
+    }
+}
+@media screen and (max-width:500px ){
+    .card-wrapper{
+        width: 40%;
+        margin-left: 35%;
+        align-content: center;
+        justify-content: center;
+        grid-template-areas: 
+        'c1'
+        'c2'
+        'c3'
+        'c4'
+        'c5'
+        'c6'
+        'c7';
+    }
+}
+
